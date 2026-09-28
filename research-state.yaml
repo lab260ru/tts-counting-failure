@@ -4,7 +4,7 @@ project: "Counting Collapse in Autoregressive TTS"
 venue: "ICASSP 2026 (4 pages + 1 page refs)"
 started: "2026-08-11"
 branch: "research/ar-tts-counting-collapse"
-remote: "https://github.com/lab260ru/icassp_antispoofing"
+remote: "https://github.com/lab260ru/tts-counting-failure"
 
 question: >
   Autoregressive TTS models mis-render text containing many repetitions

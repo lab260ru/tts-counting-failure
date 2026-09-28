@@ -86,10 +86,11 @@
 \title{Repetition, Not Length: Isolating the Counting\\
        Failure in Neural Text-to-Speech}
 
-\name{Kirill Borodin$^{1}$, Vasilii Kudryavtsev$^{1}$, Grach Mkrtchian$^{2,3}$}
+\name{Kirill Borodin$^{1}$, Vasilii Kudryavtsev$^{1}$, Maxim Maslov$^{2}$, Grach Mkrtchian$^{2,3}$}
 \address{$^{1}$BitmanagerAI, Dubai, UAE \quad
-         $^{2}$lab260, Moscow, Russia \quad
-         $^{3}$MTUCI, Moscow, Russia}
+         $^{2}$lab260, Yerevan, Armenia \quad
+         $^{3}$MTUCI, Moscow, Russia \\
+         kborodin.research@gmail.com}
 
 \begin{document}
 \maketitle
@@ -155,10 +156,8 @@ we measured.
 \textbf{Test set.}
 \NStimuli{} items, generated deterministically by a released script; the
 texts are authored, not drawn from a corpus, since every sentence must
-contain its target word a known number of times. Templates were drafted with the Claude Fable~5 language
-model\footnote{\url{https://www.anthropic.com/news/claude-fable-5-mythos-5}}
-and edited by hand,
-under fixed constraints: targets are common one- or two-syllable words
+contain its target word a known number of times. Templates follow fixed
+constraints: targets are common one- or two-syllable words
 without close homophones, and carriers are plain conversational
 English. Six carrier templates each fix a prefix, target and
 suffix (``The dog was \emph{very} \dots{} big''); the target is repeated
@@ -172,7 +171,7 @@ controls period-8; a never-cycled variant quantifies the difference
 (Sec.~\ref{sec:results}). Nor are the items improbable
 strings (Table~\ref{tab:nll}): under two independent language models the
 \emph{control} is the less probable text in most pairs, so the repeated
-items are, if anything, the more natural ones. The generation script, test set, transcripts and analysis code are released.\footnote{\url{https://github.com/lab260ru/icassp_antispoofing}}
+items are, if anything, the more natural ones. The generation script, test set, transcripts and analysis code are released.\footnote{\url{https://github.com/lab260ru/tts-counting-failure}}
 
 \begin{table}[t]
 \centering
@@ -628,6 +627,12 @@ checkpoints, evaluated on synthetic text written by the authors. It
 involved no human subjects, no animal subjects and no personal data, and
 no ethical approval was required. The authors declare no competing
 financial interests.
+
+\section*{Acknowledgements}
+The authors used Claude Fable~5 (Anthropic) only to polish the language
+of this paper. All ideas, experimental design, experiments and analysis
+are the authors' own; the authors reviewed all text and take full
+responsibility for it. The authors declare no conflicts of interest.
 
 
 \let\oldthebibliography\thebibliography
